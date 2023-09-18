@@ -1,0 +1,250 @@
+\documentclass[a4paper]{article}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\usepackage[left=0.5in,top=0.25in,right=0.5in,bottom=0.25in]{geometry}
+% \usepackage[scale=0.95]{tgschola}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+
+% ----------- Config ------------
+
+\input{glyphtounicode}
+
+\hypersetup {
+    % pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
+    % urlbordercolor=black        % color of external links
+    colorlinks   = true, %Colours links instead of ugly boxes
+    urlcolor     = blue, %Colour for external hyperlinks
+}
+
+\setlist{nosep}
+\raggedright
+
+\pdfgentounicode=1
+
+\graphicspath{ {./img} }
+
+% ----------- End of Config -----------
+
+% ----------- Definitions -----------
+    
+\newcommand{\tinyBulletSep} { \vspace{1.2mm} }
+
+\newcommand{\bulletSep} { \vspace{2.2mm} }
+
+\newcommand{\sectionSep} { \vspace{3mm} }
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-15pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} {
+        \fontfamily{qcs}\selectfont \large \scshape #1
+    }}
+    \vspace*{-6pt} \lineunder
+    \vspace{0.5mm}
+}
+
+\newcommand{\educationItem}[5]{
+    \textbf{#1}\hfill #2\\
+    #3, \textit{#4} \hfill #5\\
+}
+
+\newcommand{\experienceItem}[5]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill #4 \\
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+\newcommand{\volunteerItem}[5]{
+    \textbf{#1} -- \textit{#2} \hfill #3 \\
+    \begin{itemize}
+        #4
+    \end{itemize}
+}
+
+\newcommand{\projectItem}[5]{
+    {\textbf{#1}} {(\sl #2)}\hfill
+    \ifx&#3&%
+    % #3 is empty
+    \href{#4}{Github}\\
+    \else
+    % #3 is nonempty
+    \href{#3}{Live Preview} | \href{#4}{Github}\\
+    \fi
+    \begin{itemize}
+        #5
+    \end{itemize}
+}
+
+\newcommand{\image}[1]{
+    \begingroup\normalfont
+    \Large
+    \includegraphics[height=\fontcharht\font`\B]{#1.png}%
+    \endgroup
+}
+
+
+% ----------- End of definitions -----------
+
+\begin{document}
+
+% ----------- Profile -----------
+
+\begin{center}
+    {\Huge \scshape \fontfamily{qcs}\selectfont Sahil}\\
+    \vspace{0.5mm}
+    \faPhone~+91 8219667145
+    $\cdot$
+    \href{mailto:sahil180702@gmail.com}{sahil180702@gmail.com}
+    $\cdot$
+    \href{https://www.linkedin.com/in/sahil-187-/}{Linked\faLinkedinSquare~Profile}
+\end{center}
+
+\vspace{-2mm}
+
+% ----------- Education -----------
+
+\header{Education}
+
+\educationItem{National Institute of Technology, Hamirpur}{Hamirpur}{Bachelor of Technology, Computer Science \& Enginnering}{CGPA: 8.99}{Dec 2020 - Present}
+\bulletSep
+
+\educationItem{St. D R Public School}{Gagret}{Higher Secondary (12th)}{Percentage: 94.8}{Apr 2018 - Mar 2019}
+\sectionSep
+
+% ----------- Work Experience -----------
+
+% \header{Work Experience}
+
+% \experienceItem{Coding Ninjas}{Remote}{Technical Content Writer Intern}{Mar 2023 - Jun 2023}{
+%     \item Created \textbf{high-quality} content covering a wide range of programming languages, frameworks, and tools.
+%     \item Authored and edited \textbf{technical blog posts, tutorials}, etc., aimed at helping students learn and improve.
+% }
+% \bulletSep
+
+% \experienceItem{Coding Shuttle}{Remote}{Problem Setter}{Feb 2023 - Mar 2023}{
+%     \item Generated test cases and optimal solutions for problems based on \textbf{Data Structures and Algorithms}.
+% }
+% \sectionSep
+
+% ----------- Projects -----------
+
+\header{Projects}
+\projectItem{Chat Application}{Swift, Firebase, CocoaPods}{}{https://github.com/Sahil-187/Flash-Chat-iOS13.git}{
+    \item Created a real-time chat application for iOS and MacOS, following the Model-View-Controller (\textbf{MVC}) design pattern. 
+    \item Implemented user authentication and data storage functionalities leveraging Firebase Authentication and Firestore, resulting in a seamless and secure user experience while reducing data breach risks.
+}
+\bulletSep
+
+\projectItem{Todo Application}{Swift, Realm, Cocoapods, CoreData}{}{https://github.com/Sahil-187/Todo-Application.git}{
+    \item Designed and implemented an efficient \textbf{Swift-based} task manager powered by the \textbf{Realm database}, enabling seamless organization of tasks within categories.
+    \item Implemented \textbf{add, delete, check}, and \textbf{search} functionalities, providing users with a streamlined way to manage tasks and ensuring a clutter-free experience.
+}
+
+\bulletSep
+
+\projectItem{Paint Application}{C++, WinBGIm Graphics Library}{}{https://github.com/Sahil-187/Paint-Application}{
+    \item Developed a comprehensive paint application with a \textbf{user-friendly graphical interface}, allowing users to create digital artwork effortlessly.
+    \item \textbf{Features}: Save as JPEG file, Color Palette, Size options, etc.
+    \item Utilized the \textbf{WinBGIm Graphics Library} to seamlessly integrate graphics capabilities, ensuring a responsive drawing environment.
+}
+\sectionSep
+% ----------- Achievements -----------
+
+\header{Achievements}
+\image{cc} \textbf{CodeChef} - \textbf{\href{https://www.codechef.com/users/mamba_18}{mamba\_18}}
+\begin{itemize}
+    \item Achieved a \textbf{4-star rating} with a peak rating of \textbf{1825}, showcasing consistent performance in competitive programming challenges.
+    \item Ranked among the \textbf{top 2,000} out of \textbf{over 200,000} Indian users on the platform, demonstrating a competitive edge in coding skills.
+    \item Attained a commendable \textbf{global ranking of 197th} out of \textbf{2,100+} participants in the \href{https://www.codechef.com/rankings/START53B?itemsPerPage=100&order=asc&page=1&search=mamba_18&sortBy=rank}{Starters 53} contest, showcasing proficiency in algorithmic problem solving.
+\end{itemize}
+\tinyBulletSep
+
+\image{cf} \textbf{Codeforces} - \textbf{\href{https://codeforces.com/profile/Sahil_187}{Sahil\_187}}
+\begin{itemize}
+    \item Achieved the rank of \textbf{Specialist} with a maximum rating of \textbf{1457}, demonstrating consistent performance in Codeforces contests.
+    \item Attained a commendable \textbf{global ranking of 621st} out of \textbf{9,600+} participants in the \href{https://codeforces.com/contest/1686/standings/participant/133631879\#p133631879}{Codeforces Round 794}, highlighting strong problem solving skills.
+\end{itemize}
+\tinyBulletSep
+
+\image{lc} \textbf{Leetcode} - \textbf{\href{https://leetcode.com/Sahil-187/}{Sahil-187}}
+\begin{itemize}
+    \item Successfully solved \textbf{600+ programming problems} on LeetCode, showcasing strong coding skills.
+\end{itemize}
+\tinyBulletSep
+
+% https://clist.by/standings/kick-start-round-g-31261744/?find_me=45689030
+\image{google} \textbf{Google} | Ranked \textbf{2251th} out of \textbf{12,000+} participants in \textbf{Google Kickstart} 2022 Round E.
+\tinyBulletSep
+
+\image{stopstalk} \textbf{StopStalk} | Solved \textbf{\href{https://www.stopstalk.com/user/profile/Sahil_187}{2000+}} programming problems across all coding platforms.
+\bulletSep
+\sectionSep
+
+% ----------- Skills -----------
+
+\header{Skills}
+% [t] option means top
+\begin{minipage}[t]{0.6\textwidth}
+    % Column 1
+    % , Go, MATLAB
+    \textbf{Languages:} C/C++, Swift\\
+    \textbf{Databases:} MySQL, Realm, FireStore, CoreData\\
+    \textbf{Others:} UIKit, CoreAnimation, CoreGraphics \LaTeX
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.33\textwidth}
+    % Column 2
+    \textbf{Frameworks:} SwiftUI, Cocoa Touch\\
+    \textbf{Tools:} Git, XCode, CocoaPods, Firebase, AlaomoFire
+\end{minipage}
+\sectionSep
+
+% ----------- Coursework -----------
+\header{Coursework}
+\begin{minipage}[t]{0.4\textwidth}
+    % Column 1
+    Data Structures \& Algorithms\\
+    Database Management Systems\\
+    Computer Networks
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.25\textwidth}
+    % Column 2
+    Operating Systems\\
+    Compiler Design
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+    % Column 3
+    Object Oriented Programming\\
+    Distributed Systems
+\end{minipage}
+\hfill
+\sectionSep
+
+% ----------- Volunteer Experience -----------
+
+\header{Volunteer Experience}
+
+\volunteerItem{CSEC NIT Hamirpur}{Coordinator}{Apr 2021 - Present}{
+    \item Designed problems for monthly programming contest and Conducted programming meets on various topics.
+}
+
+\bulletSep
+
+\volunteerItem{GLUG}{Member}{Jul 2021 - Present}{
+    \item Helped in organizing Software Freedom Day event involving introduction of more than 100 freshmen to the world
+    of Open Source followed by Linux installation fest.
+}
+
+\end{document}

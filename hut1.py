@@ -14,51 +14,53 @@ t.speed(5)
 # Define a function to draw and
 # fill a rectangle with the given
 # dimensions and color
+
+
 def drawRectangle(t, width, height, color):
 
-	t.fillcolor(color)
-	t.begin_fill()
-	t.forward(width)
-	t.left(90)
-	t.forward(height)
-	t.left(90)
-	t.forward(width)
-	t.left(90)
-	t.forward(height)
-	t.left(90)
-	t.end_fill()
+    t.fillcolor(color)
+    t.begin_fill()
+    t.forward(width)
+    t.left(90)
+    t.forward(height)
+    t.left(90)
+    t.forward(width)
+    t.left(90)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
 
 
 # Define a function to draw and fill an equalateral right
 # triangle with the given hypotenuse length and color. This
 # is used to create a roof shape.
 def drawTriangle(t, length, color):
-	t.fillcolor(color)
-	t.begin_fill()
-	t.forward(length)
-	t.left(135)
-	t.forward(length / math.sqrt(2))
-	t.left(90)
-	t.forward(length / math.sqrt(2))
-	t.left(135)
-	t.end_fill()
+    t.fillcolor(color)
+    t.begin_fill()
+    t.forward(length)
+    t.left(135)
+    t.forward(length / math.sqrt(2))
+    t.left(90)
+    t.forward(length / math.sqrt(2))
+    t.left(135)
+    t.end_fill()
 
 
 # Define a function to draw and fill a parallelogram, used to
 # draw the side of the house
 def drawParallelogram(t, width, height, color):
-	t.fillcolor(color)
-	t.begin_fill()
-	t.left(30)
-	t.forward(width)
-	t.left(60)
-	t.forward(height)
-	t.left(120)
-	t.forward(width)
-	t.left(60)
-	t.forward(height)
-	t.left(90)
-	t.end_fill()
+    t.fillcolor(color)
+    t.begin_fill()
+    t.left(30)
+    t.forward(width)
+    t.left(60)
+    t.forward(height)
+    t.left(120)
+    t.forward(width)
+    t.left(60)
+    t.forward(height)
+    t.left(90)
+    t.end_fill()
 
 
 # Draw and fill the front of the house
