@@ -1,3 +1,4 @@
+# Program to implement Cohen–Sutherland 2D clipping and window–viewport mapping.
 import matplotlib.pyplot as plt
 
 # Define the region codes for the 4 regions
